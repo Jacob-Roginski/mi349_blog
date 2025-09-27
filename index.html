@@ -1,14 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Hello, world!</h1>
-  <script src="script.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <style>
+      :root {
+        --max-width: 760px;
+        --accent: #34a74d;
+        --muted: #34a74d;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Segoe UI, Roboto, Arial, sans-serif;
+        line-height: 1.6;
+        color: #222;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 1rem;
+      }
+      .site-header {
+        background: #262626;
+        border-bottom: 1px solid #e6e6e6;
+      }
+      .site-title {
+        margin: 0;
+        padding: 0.75rem 0;
+        font-size: 1.2rem;
+      }
+      .site-title a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .nav {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+      }
+      .nav a {
+        color: #ffffff;
+        text-decoration: none;
+        padding: 0.75rem 0;
+        display: inline-block;
+      }
+      .main {
+        padding: 1rem 0;
+      }
+      .posts {
+        display: block;
+        gap: 2rem;
+      }
+      .post {
+        margin-bottom: 2rem;
+      }
+      .post-image {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        margin: 0.5rem 0;
+      }
+      .meta {
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0.75rem 0;
+      }
+      .data-table th,
+      .data-table td {
+        border: 1px solid #ddd;
+        padding: 0.5rem;
+        text-align: left;
+      }
+      .newsletter {
+        border-top: 1px dashed #ddd;
+        padding-top: 1rem;
+        margin-top: 1rem;
+      }
+      .newsletter-form {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+      }
+      .newsletter-form input[type="email"] {
+        flex: 1;
+        padding: 0.5rem;
+      }
+      button {
+        background: var(--accent);
+        color: #fff;
+        border: none;
+        padding: 0.6rem 0.9rem;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      .site-footer {
+        background: #fafafa;
+        border-top: 1px solid #eee;
+        padding: 1rem 0;
+        margin-top: 2rem;
+        color: #555;
+      }
+      .bio-image {
+        width: 180px;
+        float: right;
+        margin-left: 1rem;
+        border-radius: 6px;
+      }
+      .contact-form label {
+        display: block;
+        margin-top: 0.75rem;
+      }
+      .contact-form input,
+      .contact-form select,
+      .contact-form textarea {
+        width: 100%;
+        padding: 0.5rem;
+        margin-top: 0.25rem;
+      }
+      @media (min-width: 900px) {
+        .nav {
+          gap: 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1 class="site-title"><a href="index.html">Finding Adventure</a></h1>
+        <nav aria-label="Main navigation">
+          <ul class="nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="posts">
+        <article class="post">
+          <header>
+            <h2>Open Road, Long Trails: Embracing the Journey</h2>
+            <p class="meta">By Jacob Roginski — Published September 27, 2025</p>
+          </header>
+          <img
+            src="https://images.pexels.com/photos/63324/california-road-highway-mountains-63324.jpeg?cs=srgb&dl=pexels-pixabay-63324.jpg&fm=jpg"
+            alt="Open road with fields and mountains"
+            class="post-image"
+          />
+          <p>
+            Looking for adventure doesn't always mean traveling to far-off
+            places. Sometimes, it's about embracing the journey itself. The open
+            road invites exploration and discovery, whether it's a weekend drive
+            through the countryside or a long trek along a scenic trail. The
+            thrill of the unknown, the changing landscapes, and the simple joy
+            of movement can transform even a short trip into a memorable
+            experience.
+          </p>
+          <p>
+            A good way to start is by planning a route that includes a mix of
+            well-known spots and hidden gems. Research local attractions, scenic
+            byways, and off-the-beaten-path locations that pique your curiosity.
+            Don't be afraid to veer off course if something interesting catches
+            your eye. Pack light but smart, bringing essentials like water,
+            snacks, a map, and a camera to capture spontaneous moments. Whether
+            you're traveling solo or with companions, remain open to new
+            experiences and interactions along the way. Often, the most
+            memorable adventures arise from unplanned detours and chance
+            encounters.
+          </p>
+          <p>
+            Below is a small example table showing what good starter items to
+            bring on a road trip are.
+          </p>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Essentials</th>
+                <th>Tools</th>
+                <th>Support Items</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Medical Kit</td>
+                <td>Multi-tool</td>
+                <td>Sat Phone</td>
+              </tr>
+              <tr>
+                <td>Water Source</td>
+                <td>Filters</td>
+                <td>Pots and Pans</td>
+              </tr>
+              <tr>
+                <td>Food</td>
+                <td>Fire Starter</td>
+                <td>Cooler</td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+
+        <article class="post">
+          <header>
+            <h2>Focus on the Journey not the Destination</h2>
+            <p class="meta">By Jacob Roginski — Published September 20, 2025</p>
+          </header>
+          <img
+            src="https://safety4sea.com/wp-content/uploads/2023/02/shutterstock_133581527.jpg"
+            alt="Stick Figures on a Target"
+            class="post-image"
+          />
+          <p>
+            Focusing on the journey rather than the destination can transform
+            how we experience life. In a world that often emphasizes goals and
+            outcomes, we must learn to find value in the present moment. By
+            appreciating the small steps and experiences along the way, we
+            cultivate mindfulness and gratitude. This shift in perspective can
+            lead to greater fulfillment and a deeper connection to our daily
+            lives.
+          </p>
+          <p>
+            From this perspective, the process of getting somewhere becomes as
+            important as the destination itself. This means valuing the
+            experiences, lessons, and growth that occur along the way. When we
+            focus solely on the end goal, we may overlook the richness of the
+            journey and the opportunities for learning and connection that arise
+            in the present moment.
+          </p>
+          <p>
+            By embracing the journey, we can find joy in the everyday moments
+            and cultivate a sense of purpose that goes beyond achieving specific
+            outcomes. This mindset encourages us to be present, appreciate the
+            small victories, and find meaning in the process of living itself.
+          </p>
+        </article>
+      </section>
+
+      <section class="newsletter">
+        <h3>Subscribe to the newsletter</h3>
+        <p>
+          Short, reliable writing about curiosity, habits, and making small
+          changes that matter.
+        </p>
+        <form class="newsletter-form" action="#" method="post" novalidate>
+          <label for="email">Email address</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="name@example.com"
+            required
+          />
+          <button type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">© 2025 Finding Adventure — Built by Jacob</div>
+    </footer>
+  </body>
 </html>
