@@ -1,1 +1,178 @@
 
+/* basic global styles */
+:root {
+  --max-width: 760px;
+  --accent: #34a74d;
+  --muted: #34a74d;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem;
+}
+.site-header {
+  background: #262626;
+  border-bottom: 1px solid #e6e6e6;
+}
+.site-title {
+  margin: 0;
+  padding: 0.75rem 0;
+  font-size: 1.2rem;
+}
+.site-title a {
+  color: var(--accent);
+  text-decoration: none;
+}
+.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 0;
+  display: inline-block;
+}
+.main {
+  padding: 1rem 0;
+}
+.posts {
+  display: block;
+  gap: 2rem;
+}
+.post {
+  margin-bottom: 2rem;
+}
+.post-image {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin: 0.5rem 0;
+}
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+/* table styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+}
+.data-table th,
+.data-table td {
+  border: 1px solid #ddd;
+  padding: 0.5rem;
+  text-align: left;
+}
+/* newsletter page break and section */
+.newsletter {
+  border-top: 1px dashed #ddd;
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* footer styles */
+.site-footer {
+  background: #fafafa;
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  color: #555;
+}
+.bio-image {
+  width: 180px;
+  float: right;
+  margin-left: 1rem;
+  border-radius: 6px;
+}
+.contact-form label {
+  display: block;
+  margin-top: 0.75rem;
+}
+
+/* Responsive adjustments for images */
+@media (min-width: 900px) {
+  .nav {
+    gap: 1.5rem;
+  }
+}
+
+/* Netlify contact form */
+form[name="contact"],
+form.contact-form {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  max-width: 680px;
+}
+
+form[name="contact"] p {
+  margin: 0 0 0.8rem 0;
+}
+
+form[name="contact"] label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: #222;
+}
+
+form[name="contact"] input[type="text"],
+form[name="contact"] input[type="email"],
+form[name="contact"] textarea,
+form.contact-form input,
+form.contact-form select,
+form.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+form[name="contact"] input:focus,
+form[name="contact"] textarea:focus,
+form.contact-form input:focus,
+form.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(52, 167, 77, 0.08);
+}
+
+form[name="contact"] button,
+form.contact-form button {
+  margin-top: 0.5rem;
+}
+
+/* Small screens: keep full width */
+@media (max-width: 520px) {
+  form[name="contact"],
+  form.contact-form {
+    padding: 0.75rem;
+  }
+}
