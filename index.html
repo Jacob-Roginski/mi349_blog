@@ -5,136 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <style>
-      :root {
-        --max-width: 760px;
-        --accent: #34a74d;
-        --muted: #34a74d;
-      }
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        font-family: Segoe UI, Roboto, Arial, sans-serif;
-        line-height: 1.6;
-        color: #222;
-        margin: 0;
-        padding: 0;
-      }
-      .container {
-        max-width: var(--max-width);
-        margin: 0 auto;
-        padding: 1rem;
-      }
-      .site-header {
-        background: #262626;
-        border-bottom: 1px solid #e6e6e6;
-      }
-      .site-title {
-        margin: 0;
-        padding: 0.75rem 0;
-        font-size: 1.2rem;
-      }
-      .site-title a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      .nav {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 1rem;
-      }
-      .nav a {
-        color: #ffffff;
-        text-decoration: none;
-        padding: 0.75rem 0;
-        display: inline-block;
-      }
-      .main {
-        padding: 1rem 0;
-      }
-      .posts {
-        display: block;
-        gap: 2rem;
-      }
-      .post {
-        margin-bottom: 2rem;
-      }
-      .post-image {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-        margin: 0.5rem 0;
-      }
-      .meta {
-        color: var(--muted);
-        font-size: 0.9rem;
-      }
-      .data-table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 0.75rem 0;
-      }
-      .data-table th,
-      .data-table td {
-        border: 1px solid #ddd;
-        padding: 0.5rem;
-        text-align: left;
-      }
-      .newsletter {
-        border-top: 1px dashed #ddd;
-        padding-top: 1rem;
-        margin-top: 1rem;
-      }
-      .newsletter-form {
-        display: flex;
-        gap: 0.5rem;
-        align-items: center;
-      }
-      .newsletter-form input[type="email"] {
-        flex: 1;
-        padding: 0.5rem;
-      }
-      button {
-        background: var(--accent);
-        color: #fff;
-        border: none;
-        padding: 0.6rem 0.9rem;
-        border-radius: 4px;
-        cursor: pointer;
-      }
-      .site-footer {
-        background: #fafafa;
-        border-top: 1px solid #eee;
-        padding: 1rem 0;
-        margin-top: 2rem;
-        color: #555;
-      }
-      .bio-image {
-        width: 180px;
-        float: right;
-        margin-left: 1rem;
-        border-radius: 6px;
-      }
-      .contact-form label {
-        display: block;
-        margin-top: 0.75rem;
-      }
-      .contact-form input,
-      .contact-form select,
-      .contact-form textarea {
-        width: 100%;
-        padding: 0.5rem;
-        margin-top: 0.25rem;
-      }
-      @media (min-width: 900px) {
-        .nav {
-          gap: 1.5rem;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
     <header class="site-header">
@@ -152,7 +23,6 @@
 
     <main class="container">
       <section class="posts">
-        <h2>Latest Posts</h2>
         <article class="post">
           <header>
             <h2>Open Road, Long Trails: Embracing the Journey</h2>
@@ -258,16 +128,11 @@
           Short, reliable writing about curiosity, habits, and making small
           changes that matter.
         </p>
-        <form class="newsletter-form" action="#" method="post" novalidate>
-          <label for="email">Email address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            placeholder="name@example.com"
-            required
-          />
-          <button type="submit">Subscribe</button>
+        <form name="contact" netlify>
+          <p>
+            <label>Email <input type="email" name="email" /></label>
+            <button type="submit">Send</button>
+          </p>
         </form>
       </section>
     </main>
