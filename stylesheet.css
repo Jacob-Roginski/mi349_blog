@@ -1,4 +1,3 @@
-
 /* basic global styles */
 :root {
   --max-width: 760px;
@@ -121,6 +120,7 @@ button {
 }
 
 /* Netlify contact form */
+/* General Info for contact style*/
 form[name="contact"],
 form.contact-form {
   background: #ffffff;
@@ -129,11 +129,11 @@ form.contact-form {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
   max-width: 680px;
 }
-
+/* Spacing for form paragraph (elements) */
 form[name="contact"] p {
   margin: 0 0 0.8rem 0;
 }
-
+/* Style for labels in form elements */
 form[name="contact"] label {
   display: block;
   font-weight: 600;
@@ -141,6 +141,7 @@ form[name="contact"] label {
   color: #222;
 }
 
+/* Input and text styles */
 form[name="contact"] input[type="text"],
 form[name="contact"] input[type="email"],
 form[name="contact"] textarea,
